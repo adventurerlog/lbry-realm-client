@@ -1,11 +1,18 @@
 <div class="container">
-  <h1>Typography</h1><br/><br/>
+  <h1>Showcase</h1>
+  <p>This page is made to show all the elements and components,<br/>
+    and it's only avalabile in dev mode, not in the production build.</p>
+  <h1>Typography</h1>
 
   <p>The base type is 1.6rem (16px) over 1.6 line height (24px)</p>
   <a>Anchor</a>
+  <div class="spacer"></div>
   <em>Emphasis</em>
+  <div class="spacer"></div>
   <small>Small</small>
+  <div class="spacer"></div>
   <strong>Strong</strong>
+  <div class="spacer"></div>
   <u>Underline</u>
   <h1>Heading</h1>
   <h2>Heading</h2>
@@ -14,19 +21,20 @@
   <h5>Heading</h5>
   <h6>Heading</h6>
 
-  <h1>Blockquotes</h1><br/><br/>
+  <h1>Blockquotes</h1>
 
   <blockquote>
     <p><em>Yeah!! Milligram is amazing.</em></p>
   </blockquote>
 
   <h1>Buttons</h1><br/><br/>
-
   <a class="button" href="#">Default Button</a>
+  <div class="spacer"></div>
   <button class="button button-outline">Outlined Button</button>
+  <div class="spacer"></div>
   <input class="button button-clear" type="submit" value="Clear Button">
 
-  <h1>List</h1><br/><br/>
+  <h1>List</h1>
 
   <ul>
     <li>Unordered list item 1</li>
@@ -41,7 +49,7 @@
     <dd>Description list item 1.1</dd>
   </dl>
 
-  <h1>Forms</h1><br/><br/>
+  <h1>Forms</h1>
 
   <form>
     <fieldset>
@@ -64,7 +72,7 @@
     </fieldset>
   </form>
 
-  <h1>Tables</h1><br/><br/>
+  <h1>Tables</h1>
 
   <table>
     <thead>
@@ -91,7 +99,7 @@
     </tbody>
   </table>
 
-  <h1>Grids</h1><br/><br/>
+  <h1>Grids</h1>
 
   <div class="example">
     <div class="container">
@@ -119,37 +127,20 @@
       </div>
     </div>
   </div>
-  <style>
-    .example .column-demo {
-      background: #d1d1d1;
-      border-radius: .4rem;
-      display: block;
-      font-size: 1rem;
-      font-weight: 600;
-      height: 3rem;
-      letter-spacing: .1rem;
-      line-height: 3rem;
-      margin-bottom: 2.5rem;
-      text-align: center;
-      text-transform: uppercase;
-    }
-  </style>
 
-  <h1>Code</h1><br/><br/>
+  <h1>Code</h1>
   <pre><code>
-    .milligram {
-    color: #9b4dca;
-    }
+  {{preCodeDemo}}
   </code></pre>
 
-  <h1>Extensions</h1><br/><br/>
+  <h1>Extensions</h1>
 
   <div class="example">
     <div class="row">
-      <div class="column"><a class="button" href="javascript: void(0)">Default .button</a><a
-        class="button button-outline" href="javascript: void(0)">Outlined .button</a><a class="button button-clear"
-                                                                                        href="javascript: void(0)">Clear
-        .button</a></div>
+      <div class="column">
+        <a class="button" href="javascript: void(0)">Default .button</a><a
+        class="button button-outline" href="javascript: void(0)">Outlined .button</a>
+        <a class="button button-clear" href="javascript: void(0)">Clear .button</a></div>
       <div class="column"><a class="button button-black" href="javascript: void(0)">.button-black</a><a
         class="button button-black button-outline" href="javascript: void(0)">.button-black</a><a
         class="button button-black button-clear" href="javascript: void(0)">.button-black</a></div>
@@ -161,37 +152,6 @@
         class="button button-large button-clear" href="javascript: void(0)">.button-large</a></div>
     </div>
   </div>
-
-  <style>
-    .button-black {
-      background-color: black;
-      border-color: black;
-    }
-
-    .button-black.button-clear,
-    .button-black.button-outline {
-      background-color: transparent;
-      color: black;
-    }
-
-    .button-black.button-clear {
-      border-color: transparent;
-    }
-
-    .button-small {
-      font-size: .8rem;
-      height: 2.8rem;
-      line-height: 2.8rem;
-      padding: 0 1.5rem;
-    }
-
-    .button-large {
-      font-size: 1.4rem;
-      height: 4.5rem;
-      line-height: 4.5rem;
-      padding: 0 2rem;
-    }
-  </style>
 
   <pre><code>
    {{preCodeExtensions}}

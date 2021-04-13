@@ -8,20 +8,15 @@ const routes: Routes = [
   {path: 'channel', loadChildren: () => import('./modules/channel/channel.module').then(m => m.ChannelModule)},
   {path: 'dashboard', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
   {path: 'profile', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
-  {
+];
+
+if (!environment.production) {
+  routes.push({
     path: 'showcase',
     loadChildren: () => import('./modules/showcase/showcase.module').then(m => m.ShowcaseModule)
-  }
-];
-//
-// if (!environment.production) {
-//   routes.push({
-//     path: 'showcase',
-//     loadChildren: () => import('./modules/showcase/showcase.module').then(m => m.ShowcaseModule)
-//   });
-//   console.log('Added showcase');
-//   console.log(routes);
-// }
+  });
+  console.log('Added showcase!');
+}
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
