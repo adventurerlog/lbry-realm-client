@@ -40,3 +40,11 @@ $color-danger: var(--color-danger);
 
 @import "node_modules/milligram-scss/dist/milligram";
 @import "milligram-overwrite";
+
+.center-block {
+  margin:0 auto;
+}
+.spacer {
+  display: block;
+  margin-top:70px;
+}
