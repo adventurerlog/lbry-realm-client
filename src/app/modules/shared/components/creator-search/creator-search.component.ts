@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {CreatorSearchResult} from '@models/creator-search-result.model';
 
 @Component({
@@ -8,6 +8,7 @@ import {CreatorSearchResult} from '@models/creator-search-result.model';
 })
 export class CreatorSearchComponent implements OnInit {
   searchTerm!: string;
+  @Output() onSearch: EventEmitter<any> = new EventEmitter();
   searchResults: CreatorSearchResult[] = [];
 
   constructor() {
@@ -38,8 +39,17 @@ export class CreatorSearchComponent implements OnInit {
         );
       }
       setTimeout(() => {
-        creatorsListSearchStart.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+        creatorsListSearchStart.scrollIntoView({block: 'end', behavior: 'smooth'});
+        this.onSearch.emit(true);
       }, 200);
+    } else {
+      this.onSearch.emit(false);
+    }
+  }
+
+  keyUp(): void {
+    if(!this.searchTerm){
+      this.onSearch.emit(false);
     }
   }
 }

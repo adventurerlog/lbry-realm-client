@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+  searchPlaceholder = true;
+  sp() {
+    document.querySelector('#search-placeholder').scrollIntoView({block: 'end', behavior: 'smooth'})
+  }
   constructor() { }
 
   ngOnInit(): void {
