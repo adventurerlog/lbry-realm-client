@@ -1,0 +1,10 @@
+<div class="spacer"></div>
+<h2 style="text-align: center">You can also search for your favorite creators</h2>
+
+<input type="search" [(ngModel)]="searchTerm" (change)="lookupCreators($event,creatorsListSearchStart)">
+<ng-container *ngIf="searchResults.length && !!searchTerm">
+  <ng-container *ngFor="let result of searchResults">
+    <app-creator-card [data]="result"></app-creator-card>
+  </ng-container>
+</ng-container>
+<div id="creators-list-search-start" #creatorsListSearchStart></div>
