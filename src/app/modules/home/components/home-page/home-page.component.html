@@ -1,8 +1,22 @@
-<p>home-page works!</p>
+<div class="container">
+  <app-menu></app-menu>
+  <div class="above-the-fold" style="height: 100vh;">
+    <div class="row">
+      <div class="column">
+        <h1 style="margin-top: 15rem;font-size: 7.5rem;font-weight: 100"><span style="font-weight: 300;color:var(--color-success)">Claim</span> <br/>your destiny !</h1>
+        <h4 style="font-weight: 100">The realm is for lbry creators. <br/><br/>
+          Connect with your audience, support other creators and get LBC from subscriptions.
+        </h4>
+        <button class="button">GET STARTED</button>
+      </div>
+      <div class="column">
+        <div class="circle-maks" style="background-image: url('/assets/moon-2134881_640.jpg');border-radius: 100%;width: 60vh;height: 60vh;border:1px solid;position: relative;top:5vh"></div>
+      </div>
+    </div>
+    <div class="mouse center-block" style="position: relative;top:20vh"></div>
+  </div>
+  <app-featured-creators></app-featured-creators>
+  <app-creator-search></app-creator-search>
 
-<a [routerLink]="'/'" >Home</a>
-
-<a [routerLink]="'about'" >About</a>
-
-
-<button>test</button>
+  <app-footer></app-footer>
+</div>
