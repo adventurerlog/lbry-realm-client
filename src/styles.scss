@@ -1,24 +1,5 @@
 
 // TODO: add post build job with https://www.npmjs.com/package/css-vars-ponyfill
-:root {
-  // Milligram variable overwrites
-  --color-initial: #FBFAFB;
-  --color-primary: #317ec5;
-  --color-secondary: #606c76;
-  --color-tertiary: #f4f5f6;
-  --color-quaternary: #d1d1d1;
-  --color-quinary: #e1e1e1;
-
-  // Milligram variable extension
-  --color-hover: #433D77;
-  --border-radius: 28px;
-
-  // Action Color
-  --color-info: #1e2052;
-  --color-success: #44a073;
-  --color-warning:#c1903b;
-  --color-danger: #f44336;
-}
 
 // Milligram variable overwrites
 $color-initial: var(--color-initial) !default;
