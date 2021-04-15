@@ -4,6 +4,7 @@ import {environment} from "../environments/environment";
 
 const routes: Routes = [
   {path: '', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)},
+  {path: 'signup', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)},
   {path: 'about', loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)},
   {path: 'channel', loadChildren: () => import('./modules/channel/channel.module').then(m => m.ChannelModule)},
   {path: 'dashboard', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
