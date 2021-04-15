@@ -9,12 +9,17 @@ import {CreatorSearchResult} from '@models/creator-search-result.model';
 export class CreatorCardComponent implements OnInit {
 
   @Input() data: CreatorSearchResult;
+  @Input() index: number;
 
   constructor() {
   }
 
+  get creatorClass(): string {
+    return this.index === 0 ? 'no-top-margin' : 'yes-top-margin';
+  }
+
   ngOnInit(): void {
-    console.log(this.data);
+    console.log(this.data, this.index);
   }
 
 }
