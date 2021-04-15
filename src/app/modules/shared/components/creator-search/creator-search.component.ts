@@ -15,6 +15,7 @@ export class CreatorSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.lookupCreators();
   }
 
   getRandomInt(min, max): number {
@@ -23,23 +24,27 @@ export class CreatorSearchComponent implements OnInit {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  lookupCreators(event: any, creatorsListSearchStart: HTMLElement): void {
+  lookupCreators(event?: any): void {
     console.log('lookup creators: ', this.searchTerm);
+    const exampleRes =  {
+      name: 'Mr. Meeseks',
+      description: 'I\'m mr meeseks look at me!',
+      imageUrl: 'https://thumbnails.lbry.com/UCwow4CXdvIfGj126J10LN3w',
+      pageLink: '@mr-meesek'
+    }
+    if(!event) {
+      this.searchResults.push(exampleRes);
+      this.searchResults.push(exampleRes);
+      this.searchResults.push(exampleRes);
+      this.searchResults.push(exampleRes);
+    }
     if (!!this.searchTerm) {
       this.searchResults = [];
       let num = this.getRandomInt(1, 5);
       for (let i = 0; i < num; i++) {
-        this.searchResults.push(
-          {
-            name: 'Mr. Meeseks',
-            description: 'I\'m mr meeseks look at me!',
-            imageUrl: 'https://thumbnails.lbry.com/UCwow4CXdvIfGj126J10LN3w',
-            pageLink: ''
-          }
-        );
+        this.searchResults.push(exampleRes);
       }
       setTimeout(() => {
-        creatorsListSearchStart.scrollIntoView({block: 'end', behavior: 'smooth'});
         this.onSearch.emit(true);
       }, 200);
     } else {
