@@ -163,9 +163,6 @@
       <h2>Custom components</h2>
       <h4>Card</h4>
       <CreatorCard :data="cardData" :index="cardIndex"/>
-      <!--      <app-creator-card-->
-      <!--        [data]="{imageUrl:'https://thumbnails.lbry.com/UCwow4CXdvIfGj126J10LN3w',name:'Mr. Meeseks',description:'I\'m Mr. Meeseks look at meeee!',pageLink:'@mr-meesek'}"></app-creator-card>-->
-
     </div>
   </div>
 </template>
