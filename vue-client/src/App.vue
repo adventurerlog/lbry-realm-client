@@ -1,12 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="container" style="min-height: 90vh">
+      <Menu style="margin-top: 2rem;" />
+      <router-view/>
     </div>
-    <router-view/>
+    <Footer />
+
   </div>
 </template>
+
+<script>
+import Footer from "@/components/shared/Footer";
+import Menu from "@/components/shared/Menu";
+
+export default {
+  components: {Menu, Footer}
+}
+</script>
 
 <style lang="scss">
 :root {
