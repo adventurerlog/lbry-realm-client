@@ -1,0 +1,31 @@
+
+// TODO: add post build job with https://www.npmjs.com/package/css-vars-ponyfill
+
+// Milligram variable overwrites
+$color-initial: var(--color-initial) !default;
+$color-primary: var(--color-primary) !default;
+$color-secondary: var(--color-secondary) !default;
+$color-tertiary: var(--color-tertiary) !default;
+$color-quaternary: var(--color-quaternary) !default;
+$color-quinary: var(--color-quinary) !default;
+
+// Milligram variable extension
+$color-hover: var(--color-hover);
+$border-radius: var(--border-radius);
+
+// Action Color
+$color-info: var(--color-info);
+$color-success: var(--color-success);
+$color-warning:var(--color-warning);
+$color-danger: var(--color-danger);
+
+@import "node_modules/milligram-scss/dist/milligram";
+@import "milligram-overwrite";
+
+.center-block {
+  margin:0 auto;
+}
+.spacer {
+  display: block;
+  margin-top:70px;
+}
