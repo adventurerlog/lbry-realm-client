@@ -10,6 +10,7 @@
 </template>
 
 <script>
+// TODO: add loader here or in the index for before the app loads
 import Footer from "@/components/shared/Footer";
 import Menu from "@/components/shared/Menu";
 
