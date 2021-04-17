@@ -1,0 +1,67 @@
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  margin:0;
+  padding: 0;
+}
+
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  font-weight: 300;
+  border-radius: $border-radius;
+  &:focus,
+  &:hover {
+    background-color: $color-hover;
+    border-color: $color-hover;
+    color: $color-initial;
+    outline: 0;
+  }
+
+  &.button-outline {
+    &:focus,
+    &:hover {
+      border-color: $color-hover;
+      color: $color-hover;
+    }
+  }
+  &.button-clear {
+    &:focus,
+    &:hover {
+      color: $color-hover;
+    }
+  }
+}
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+input[type='week'],
+input:not([type]),
+textarea,
+select {
+  border-radius: $border-radius;
+  padding-left:12px;
+  padding-right:12px;
+}
+select:focus {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+textarea {
+  padding-left: 25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
