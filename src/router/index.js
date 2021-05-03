@@ -2,8 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
-Vue.use(VueRouter)
-
 const routes = [
   {
     path: '/',
@@ -40,9 +38,15 @@ const routes = [
     path:'/showcase',// TODO: make sure not to include this in production builds
     name:'Showcase',
     component: () => import(/* webpackChunkName: "showcase" */ '../views/Showcase.vue')
+  },
+  {
+    path: '*',
+    name:'404',
+    component: () => import(/* webpackChunkName: "404" */ '../views/404.vue')
   }
 ]
 
+Vue.use(VueRouter);
 const router = new VueRouter({
   mode:'history',
   routes
